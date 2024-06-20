@@ -38,7 +38,10 @@
             dataGridViewFuncionarios = new DataGridView();
             tabPageDadosExemplares = new TabPage();
             dataGridViewExemplares = new DataGridView();
+            tabPageLivroAlugado = new TabPage();
+            dataGridViewLivroAlugado = new DataGridView();
             leitorBindingSource = new BindingSource(components);
+            buttonAnexar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewLeitores).BeginInit();
             tabControlDados.SuspendLayout();
             tabPageDadosLeitor.SuspendLayout();
@@ -46,6 +49,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewFuncionarios).BeginInit();
             tabPageDadosExemplares.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewExemplares).BeginInit();
+            tabPageLivroAlugado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewLivroAlugado).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leitorBindingSource).BeginInit();
             SuspendLayout();
             // 
@@ -61,7 +66,7 @@
             // 
             // buttonCadExemplar
             // 
-            buttonCadExemplar.Location = new Point(24, 154);
+            buttonCadExemplar.Location = new Point(24, 165);
             buttonCadExemplar.Name = "buttonCadExemplar";
             buttonCadExemplar.Size = new Size(135, 57);
             buttonCadExemplar.TabIndex = 1;
@@ -83,6 +88,7 @@
             tabControlDados.Controls.Add(tabPageDadosLeitor);
             tabControlDados.Controls.Add(tabPageDadosFuncionario);
             tabControlDados.Controls.Add(tabPageDadosExemplares);
+            tabControlDados.Controls.Add(tabPageLivroAlugado);
             tabControlDados.Location = new Point(195, 12);
             tabControlDados.Name = "tabControlDados";
             tabControlDados.SelectedIndex = 0;
@@ -140,15 +146,46 @@
             dataGridViewExemplares.TabIndex = 3;
             dataGridViewExemplares.DoubleClick += dataGridViewExemplares_DoubleClick;
             // 
+            // tabPageLivroAlugado
+            // 
+            tabPageLivroAlugado.Controls.Add(dataGridViewLivroAlugado);
+            tabPageLivroAlugado.Location = new Point(4, 24);
+            tabPageLivroAlugado.Name = "tabPageLivroAlugado";
+            tabPageLivroAlugado.Padding = new Padding(3);
+            tabPageLivroAlugado.Size = new Size(585, 329);
+            tabPageLivroAlugado.TabIndex = 3;
+            tabPageLivroAlugado.Text = "Livros Alugados";
+            tabPageLivroAlugado.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewLivroAlugado
+            // 
+            dataGridViewLivroAlugado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewLivroAlugado.Location = new Point(6, 6);
+            dataGridViewLivroAlugado.Name = "dataGridViewLivroAlugado";
+            dataGridViewLivroAlugado.Size = new Size(573, 317);
+            dataGridViewLivroAlugado.TabIndex = 3;
+            dataGridViewLivroAlugado.DoubleClick += dataGridViewLivroAlugado_DoubleClick;
+            // 
             // leitorBindingSource
             // 
             leitorBindingSource.DataSource = typeof(Leitor);
+            // 
+            // buttonAnexar
+            // 
+            buttonAnexar.Location = new Point(24, 272);
+            buttonAnexar.Name = "buttonAnexar";
+            buttonAnexar.Size = new Size(135, 57);
+            buttonAnexar.TabIndex = 5;
+            buttonAnexar.Text = "Anexar Livro";
+            buttonAnexar.UseVisualStyleBackColor = true;
+            buttonAnexar.Click += buttonAnexar_Click;
             // 
             // FormBiblioteca
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonAnexar);
             Controls.Add(tabControlDados);
             Controls.Add(buttonCadExemplar);
             Controls.Add(buttonCadPessoa);
@@ -161,6 +198,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewFuncionarios).EndInit();
             tabPageDadosExemplares.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewExemplares).EndInit();
+            tabPageLivroAlugado.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewLivroAlugado).EndInit();
             ((System.ComponentModel.ISupportInitialize)leitorBindingSource).EndInit();
             ResumeLayout(false);
         }
@@ -177,5 +216,8 @@
         private TabPage tabPageDadosExemplares;
         private DataGridView dataGridViewExemplares;
         private BindingSource leitorBindingSource;
+        private Button buttonAnexar;
+        private TabPage tabPageLivroAlugado;
+        private DataGridView dataGridViewLivroAlugado;
     }
 }

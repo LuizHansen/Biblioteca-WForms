@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathe\\Downloads\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Biblioteca.csproj": {}
+    "C:\\Users\\mathe\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Biblioteca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathe\\Downloads\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Biblioteca.csproj": {
+    "C:\\Users\\mathe\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\Downloads\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Biblioteca.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Biblioteca.csproj",
         "projectName": "Biblioteca",
-        "projectPath": "C:\\Users\\mathe\\Downloads\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Biblioteca.csproj",
+        "projectPath": "C:\\Users\\mathe\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Biblioteca.csproj",
         "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\Downloads\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\obj\\",
+        "outputPath": "C:\\Users\\mathe\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",

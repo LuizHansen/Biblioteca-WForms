@@ -240,6 +240,6 @@ namespace Biblioteca
             exemplares.Remove(exemplar);
             MessageBox.Show("Exemplar excluído com sucesso!");
             Close();
-        }
+        } 
     }
 }

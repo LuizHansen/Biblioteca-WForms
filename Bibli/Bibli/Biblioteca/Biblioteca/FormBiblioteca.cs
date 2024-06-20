@@ -6,6 +6,7 @@ namespace Biblioteca
         public List<Funcionario> funcionarios;
         public List<Leitor> leitores;
         public List<Exemplar> exemplares;
+        public List<AlugarLivro> livroLeitor;
 
         public FormBiblioteca()
         {
@@ -14,6 +15,7 @@ namespace Biblioteca
             funcionarios = new List<Funcionario>();
             leitores = new List<Leitor>();
             exemplares = new List<Exemplar>();
+            livroLeitor = new List<AlugarLivro>();
 
             CargaInicial();
             AtualizarDataGridView();
@@ -55,6 +57,9 @@ namespace Biblioteca
             exemplares.Add(new Generico("Tutorial", "Aprenda Fácil", "Beltrano Souza", "Editora Z", 2021, "Cancao", 3, 6));
             exemplares.Add(new Generico("Dicionário", "Palavras-cruzadas", "Fulana Castro", "Editora A", 2021, "Cancao", 4, 9));
             exemplares.Add(new Generico("Mapa", "Da Groelandia", "Cicrana Dias", "Editora B", 2021, "DramaHistorico", 5, 3));
+            livroLeitor.Add(new AlugarLivro(leitores, exemplares));
+            livroLeitor.Add(new AlugarLivro(leitores, exemplares));
+            livroLeitor.Add(new AlugarLivro(leitores, exemplares));
         }
         private void buttonCadPessoa_Click(object sender, EventArgs e)
         {
@@ -71,6 +76,13 @@ namespace Biblioteca
             aux.ShowDialog();
             AtualizarDataGridView();
         }
+        private void buttonAnexar_Click(object sender, EventArgs e)
+        {
+            var aux = new FormLivrodoLeitor();
+            aux.StartPosition = FormStartPosition.CenterParent;
+            aux.ShowDialog();
+            AtualizarDataGridView();
+        }
         private void AtualizarDataGridView()
         {
             // listar funcionarios no datagridview
@@ -82,6 +94,9 @@ namespace Biblioteca
             // listar exemplares no datagridview
             dataGridViewExemplares.DataSource = null;
             dataGridViewExemplares.DataSource = exemplares;
+            //listar livros alugados no datagridview
+            dataGridViewLivroAlugado.DataSource = null;
+            dataGridViewLivroAlugado.DataSource = livroLeitor;
         }
 
         private void dataGridViewLeitores_DoubleClick(object sender, EventArgs e)
@@ -110,6 +125,15 @@ namespace Biblioteca
             // armazena o objeto selecionado
             var exemplar = dataGridViewExemplares.CurrentRow.DataBoundItem as Exemplar;
             var form = new FormExemplar(exemplares, exemplar);
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
+            AtualizarDataGridView();
+        }
+
+        private void dataGridViewLivroAlugado_DoubleClick(object sender, EventArgs e)
+        {
+            var livroAlugado = dataGridViewLivroAlugado.CurrentRow.DataBoundItem as AlugarLivro;
+            var form = new FormLivrodoLeitor(leitores, exemplares);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog();
             AtualizarDataGridView();

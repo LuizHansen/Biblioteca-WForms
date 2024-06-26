@@ -103,6 +103,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(174, 23);
             comboBox2.TabIndex = 21;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // FormLivrodoLeitor
             // 

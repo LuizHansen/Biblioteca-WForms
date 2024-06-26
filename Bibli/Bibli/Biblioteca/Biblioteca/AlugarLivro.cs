@@ -4,31 +4,38 @@
     {
         public List<Leitor> leitores;
         public List<Exemplar> exemplares;
-
-        public string NomeLeitor { get; set; }
-        public string TituloExemplar { get; set; }
-
+        public List<String> leitoresNomes = new List<String>();
+        public List<String> exemplaresNomes = new List<String>();
         public AlugarLivro() { }
 
         public AlugarLivro(Leitor leitor, Exemplar exemplar)
         {
-            NomeLeitor = leitor.Nome;
-            TituloExemplar = exemplar.Titulo;
             leitores = new List<Leitor> { leitor };
             exemplares = new List<Exemplar> { exemplar };
         }
 
         public AlugarLivro(List<Leitor> leitores, List<Exemplar> exemplares)
         {
-            this.leitores = leitores; 
+            this.leitores = leitores;
             this.exemplares = exemplares;
-            Random random = new Random();
+            definirLeitoresExemplares();
+            
+            
+            
+        }
 
-            int leitorIndex = random.Next(leitores.Count);
-            int exemplarIndex = random.Next(exemplares.Count);
+        public void definirLeitoresExemplares()
+        {
+            foreach (var leitor in this.leitores)
+            {
+                this.leitoresNomes.Add(leitor.Nome);
+            }
 
-            NomeLeitor = leitores[2 ].Nome;
-            TituloExemplar = exemplares[exemplarIndex].Titulo;
+            foreach (var exemplar in this.exemplares)
+            {
+                this.exemplaresNomes.Add(exemplar.Titulo);
+
+            }
         }
     }
 }

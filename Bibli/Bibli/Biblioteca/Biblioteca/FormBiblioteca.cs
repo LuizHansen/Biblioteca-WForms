@@ -22,6 +22,7 @@ namespace Biblioteca
         }
         private void CargaInicial()
         {
+            leitores.Add(new Leitor("", DateTime.Today, "111.111.111-22", "luiz@gmail.com", "49 99132-8979", "Leitor de Ficção"));
             leitores.Add(new Leitor("Luiz", DateTime.Today, "111.111.111-22", "luiz@gmail.com", "49 99132-8979", "Leitor de Ficção"));
             leitores.Add(new Leitor("Henrique", DateTime.Today, "111.111.111-23", "henrique@gmail.com", "49 99987-5431", "Leitor de Ficção"));
             leitores.Add(new Leitor("Alessandra", DateTime.Today, "111.111.111-24", "alessandra@outlook.com", "49 99873-4652", "Leitor Casual"));
@@ -32,6 +33,7 @@ namespace Biblioteca
             funcionarios.Add(new Funcionario("João", DateTime.Today, "444.444.444-55", "joao@gmail.com", "49 99873-4653", 3, 1024.00M, 8, "Caixa"));
             funcionarios.Add(new Funcionario("Paula", DateTime.Today, "555.555.555-66", "paula@gmail.com", "48 99921-2729", 2, 1024.00M, 10, "Auxiliar"));
             funcionarios.Add(new Funcionario("Lucas", DateTime.Today, "666.666.666-77", "lucas@gmail.com", "11 99969-1571", 4, 2222.22M, 2, "Estagiário"));
+            exemplares.Add(new Livro("", "Misterioso", "Fulano Silva", "Editora X", 2021, "Misterio", 1, 100, "Capa Dura", "1234567890"));
             exemplares.Add(new Livro("O Enigma", "Misterioso", "Fulano Silva", "Editora X", 2021, "Misterio", 1, 100, "Capa Dura", "1234567890"));
             exemplares.Add(new Livro("A Aventura", "Da Jornada", "Ciclano Lima", "Editora Y", 2021, "Novela", 2, 112, "Capa com Relevo", "2345678901"));
             exemplares.Add(new Livro("O Romance", "Do Amor Impossível", "Beltrano Souza", "Editora Z", 2021, "Romance", 3, 132, "Capa Papel Cartao", "3456789012"));
@@ -78,9 +80,9 @@ namespace Biblioteca
         }
         private void buttonAnexar_Click(object sender, EventArgs e)
         {
-            var aux = new FormLivrodoLeitor();
-            aux.StartPosition = FormStartPosition.CenterParent;
-            aux.ShowDialog();
+            var form = new FormLivrodoLeitor(leitores, exemplares);
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
             AtualizarDataGridView();
         }
         private void AtualizarDataGridView()
@@ -137,6 +139,11 @@ namespace Biblioteca
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog();
             AtualizarDataGridView();
+        }
+
+        private void FormBiblioteca_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

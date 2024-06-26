@@ -424,6 +424,7 @@
             comboBoxTipoCapa.Name = "comboBoxTipoCapa";
             comboBoxTipoCapa.Size = new Size(353, 23);
             comboBoxTipoCapa.TabIndex = 14;
+            comboBoxTipoCapa.SelectedIndexChanged += comboBoxTipoCapa_SelectedIndexChanged;
             // 
             // numericUpDownPaginas
             // 

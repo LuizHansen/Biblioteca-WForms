@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
 namespace Biblioteca
-{ 
+{
     //luiz Hansen
     public partial class FormExemplar : Form
     {
@@ -71,9 +71,9 @@ namespace Biblioteca
                 numericUpDownEdicaoHQ.Value = hq.Edicao;
                 textBoxIlustrador.Text = hq.Ilustrador;
             }
-            else if(exemplar is Generico generico)
+            else if (exemplar is Generico generico)
             {
-                listBoxTipoGenerico.Text = "" + (EnumGenericoTipo)Enum.Parse(typeof(EnumGenericoTipo),((Generico)exemplar).Tipo.ToString()); 
+                listBoxTipoGenerico.Text = "" + (EnumGenericoTipo)Enum.Parse(typeof(EnumGenericoTipo), ((Generico)exemplar).Tipo.ToString());
             }
 
             if (TabControlExemplar.SelectedIndex == 0)
@@ -229,7 +229,7 @@ namespace Biblioteca
             }
             else if (exemplar is Generico generico)
             {
-                generico.Tipo = (int)(EnumGenericoTipo)Enum.Parse(typeof(EnumGenericoTipo),listBoxTipoGenerico.Text);
+                generico.Tipo = (int)(EnumGenericoTipo)Enum.Parse(typeof(EnumGenericoTipo), listBoxTipoGenerico.Text);
             }
             MessageBox.Show("Exemplar editado com sucesso!");
             Close();
@@ -240,6 +240,11 @@ namespace Biblioteca
             exemplares.Remove(exemplar);
             MessageBox.Show("Exemplar excluído com sucesso!");
             Close();
-        } 
+        }
+
+        private void comboBoxTipoCapa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

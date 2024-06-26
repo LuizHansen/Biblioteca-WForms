@@ -20,6 +20,37 @@ namespace Biblioteca
             this.exemplares = exemplares;
             this.leitores = leitores;
             InitializeComponent();
+            definirLeitores();
+            definirExemplares();
+        }
+
+
+        public void definirLeitores()
+        {
+            List<String> leitoresNomes = new List<String>();
+            foreach (var leitor in this.leitores)
+            {
+                leitoresNomes.Add(leitor.Nome);
+            }
+
+            comboBox2.DataSource = leitoresNomes;
+        }
+        public void definirExemplares()
+        {
+            List<String> exemplaresNomes = new List<String>();
+            foreach (var exemplar in this.exemplares)
+            {
+                exemplaresNomes.Add(exemplar.Titulo);
+
+            }
+
+            comboBox1.DataSource = exemplaresNomes;
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

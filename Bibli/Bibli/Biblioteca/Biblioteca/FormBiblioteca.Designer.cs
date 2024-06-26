@@ -191,6 +191,7 @@
             Controls.Add(buttonCadPessoa);
             Name = "FormBiblioteca";
             Text = "Form1";
+            Load += FormBiblioteca_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewLeitores).EndInit();
             tabControlDados.ResumeLayout(false);
             tabPageDadosLeitor.ResumeLayout(false);

@@ -22,18 +22,18 @@ namespace Biblioteca
         }
         private void CargaInicial()
         {
-            leitores.Add(new Leitor("", DateTime.Today, "111.111.111-22", "luiz@gmail.com", "49 99132-8979", "Leitor de Ficção"));
             leitores.Add(new Leitor("Luiz", DateTime.Today, "111.111.111-22", "luiz@gmail.com", "49 99132-8979", "Leitor de Ficção"));
             leitores.Add(new Leitor("Henrique", DateTime.Today, "111.111.111-23", "henrique@gmail.com", "49 99987-5431", "Leitor de Ficção"));
             leitores.Add(new Leitor("Alessandra", DateTime.Today, "111.111.111-24", "alessandra@outlook.com", "49 99873-4652", "Leitor Casual"));
             leitores.Add(new Leitor("Vinicius", DateTime.Today, "111.111.111-25", "vinicius@bol.com.br", "48 99921-2728", "Leitor de Romance"));
             leitores.Add(new Leitor("Poze", DateTime.Today, "111.111.111-26", "poze@mafia.com", "11 99969-1570", "Leitor de Ficção"));
+
             funcionarios.Add(new Funcionario("Carlos", DateTime.Today, "222.222.222-33", "carlos@gmail.com", "49 99132-8978", 1, 9999.99M, 8, "Gerente"));
             funcionarios.Add(new Funcionario("Ana", DateTime.Today, "333.333.333-44", "ana@gmail.com", "49 99987-5432", 2, 3333.33M, 6, "Auxiliar"));
             funcionarios.Add(new Funcionario("João", DateTime.Today, "444.444.444-55", "joao@gmail.com", "49 99873-4653", 3, 1024.00M, 8, "Caixa"));
             funcionarios.Add(new Funcionario("Paula", DateTime.Today, "555.555.555-66", "paula@gmail.com", "48 99921-2729", 2, 1024.00M, 10, "Auxiliar"));
             funcionarios.Add(new Funcionario("Lucas", DateTime.Today, "666.666.666-77", "lucas@gmail.com", "11 99969-1571", 4, 2222.22M, 2, "Estagiário"));
-            exemplares.Add(new Livro("", "Misterioso", "Fulano Silva", "Editora X", 2021, "Misterio", 1, 100, "Capa Dura", "1234567890"));
+
             exemplares.Add(new Livro("O Enigma", "Misterioso", "Fulano Silva", "Editora X", 2021, "Misterio", 1, 100, "Capa Dura", "1234567890"));
             exemplares.Add(new Livro("A Aventura", "Da Jornada", "Ciclano Lima", "Editora Y", 2021, "Novela", 2, 112, "Capa com Relevo", "2345678901"));
             exemplares.Add(new Livro("O Romance", "Do Amor Impossível", "Beltrano Souza", "Editora Z", 2021, "Romance", 3, 132, "Capa Papel Cartao", "3456789012"));
@@ -59,10 +59,26 @@ namespace Biblioteca
             exemplares.Add(new Generico("Tutorial", "Aprenda Fácil", "Beltrano Souza", "Editora Z", 2021, "Cancao", 3, 6));
             exemplares.Add(new Generico("Dicionário", "Palavras-cruzadas", "Fulana Castro", "Editora A", 2021, "Cancao", 4, 9));
             exemplares.Add(new Generico("Mapa", "Da Groelandia", "Cicrana Dias", "Editora B", 2021, "DramaHistorico", 5, 3));
+
+            // Adicionando exemplares aos leitores
+            leitores[0].AdicionaExemplarLeitor(exemplares[0], leitores[0]);
+            leitores[0].AdicionaExemplarLeitor(exemplares[1], leitores[0]);
+            leitores[1].AdicionaExemplarLeitor(exemplares[2], leitores[1]);
+            leitores[1].AdicionaExemplarLeitor(exemplares[3], leitores[1]);
+            leitores[2].AdicionaExemplarLeitor(exemplares[4], leitores[2]);
+            leitores[2].AdicionaExemplarLeitor(exemplares[5], leitores[2]);
+            leitores[3].AdicionaExemplarLeitor(exemplares[6], leitores[3]);
+            leitores[3].AdicionaExemplarLeitor(exemplares[7], leitores[3]);
+            leitores[4].AdicionaExemplarLeitor(exemplares[8], leitores[4]);
+            leitores[4].AdicionaExemplarLeitor(exemplares[9], leitores[4]);
+
+            // Inicializando o objeto de aluguel de livros
             livroLeitor.Add(new AlugarLivro(leitores, exemplares));
-            livroLeitor.Add(new AlugarLivro(leitores, exemplares));
-            livroLeitor.Add(new AlugarLivro(leitores, exemplares));
+
+            // Atualizando o DataGridView
+            AtualizarDataGridView();
         }
+
         private void buttonCadPessoa_Click(object sender, EventArgs e)
         {
             var aux = new FormPessoa(funcionarios, leitores);
@@ -87,19 +103,44 @@ namespace Biblioteca
         }
         private void AtualizarDataGridView()
         {
-            // listar funcionarios no datagridview
+            // Listar funcionários no DataGridView
             dataGridViewFuncionarios.DataSource = null;
             dataGridViewFuncionarios.DataSource = funcionarios;
-            // listar leitores no datagridview
+
+            // Listar leitores no DataGridView
             dataGridViewLeitores.DataSource = null;
             dataGridViewLeitores.DataSource = leitores;
-            // listar exemplares no datagridview
+
+            // Listar exemplares no DataGridView
             dataGridViewExemplares.DataSource = null;
             dataGridViewExemplares.DataSource = exemplares;
-            //listar livros alugados no datagridview
+
+            // Listar livros alugados no DataGridView
             dataGridViewLivroAlugado.DataSource = null;
-            dataGridViewLivroAlugado.DataSource = livroLeitor;
+            dataGridViewLivroAlugado.Rows.Clear();
+            dataGridViewLivroAlugado.Columns.Clear();
+
+            dataGridViewLivroAlugado.Columns.Add("Leitor", "Leitor");
+            dataGridViewLivroAlugado.Columns.Add("Exemplar", "Exemplar");
+
+            var displayedPairs = new HashSet<Tuple<Leitor, Exemplar>>();
+
+            // Percorrer todos os leitores e seus exemplares
+            foreach (var leitor in leitores)
+            {
+                foreach (var exemplar in leitor.ExemplaresLeitor)
+                {
+                    var pair = Tuple.Create(leitor, exemplar);
+                    if (!displayedPairs.Contains(pair))
+                    {
+                        displayedPairs.Add(pair);
+                        dataGridViewLivroAlugado.Rows.Add(leitor.Nome, exemplar.Titulo);
+                    }
+                }
+            }
         }
+
+
 
         private void dataGridViewLeitores_DoubleClick(object sender, EventArgs e)
         {

@@ -14,7 +14,7 @@ namespace Biblioteca
     {
         private List<Exemplar> exemplares;
         private List<Leitor> leitores;
-        AlugarLivro livroAlugado;
+
         public FormLivrodoLeitor()
         {
             InitializeComponent();
@@ -51,6 +51,11 @@ namespace Biblioteca
             comboBox1.DataSource = exemplaresNomes;
         }
 
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Optional: handle event if needed
+        }
+
         private void salvar_Click(object sender, EventArgs e)
         {
             string leitorNome = comboBox2.SelectedItem.ToString();
@@ -68,27 +73,6 @@ namespace Biblioteca
             {
                 MessageBox.Show("Erro ao adicionar o exemplar ao leitor. Verifique as seleções e tente novamente.");
             }
-            Close();
         }
-
-        private void buttonExcluir_Click(object sender, EventArgs e)
-        {
-            string leitorNome = comboBox2.SelectedItem.ToString();
-            string exemplarTitulo = comboBox1.SelectedItem.ToString();
-            Leitor leitorSelecionado = leitores.FirstOrDefault(l => l.Nome == leitorNome);
-            Exemplar exemplarSelecionado = exemplares.FirstOrDefault(ex => ex.Titulo == exemplarTitulo);
-
-            if (leitorSelecionado != null && exemplarSelecionado != null)
-            {
-                leitorSelecionado.RemoveExemplarLeitor(exemplarSelecionado, leitorSelecionado);
-                MessageBox.Show($"Exemplar '{exemplarSelecionado.Titulo}' removido do leitor '{leitorSelecionado.Nome}' com sucesso!");
-                Close();
-            }
-            else
-            {
-                MessageBox.Show("Erro ao remover o exemplar do leitor. Verifique as seleções e tente novamente.");
-            }
-        }
-
     }
 }

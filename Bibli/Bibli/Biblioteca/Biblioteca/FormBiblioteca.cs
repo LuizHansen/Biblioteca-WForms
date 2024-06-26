@@ -74,9 +74,6 @@ namespace Biblioteca
 
             // Inicializando o objeto de aluguel de livros
             livroLeitor.Add(new AlugarLivro(leitores, exemplares));
-
-            // Atualizando o DataGridView
-            AtualizarDataGridView();
         }
 
         private void buttonCadPessoa_Click(object sender, EventArgs e)

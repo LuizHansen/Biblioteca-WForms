@@ -32,9 +32,9 @@
             buttonEditar = new Button();
             label1 = new Label();
             label3 = new Label();
-            comboBox1 = new ComboBox();
             salvar = new Button();
             comboBox2 = new ComboBox();
+            checkedListBox1 = new CheckedListBox();
             SuspendLayout();
             // 
             // buttonExcluir
@@ -77,14 +77,6 @@
             label3.TabIndex = 17;
             label3.Text = "Exemplar alugado";
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(208, 41);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(174, 23);
-            comboBox1.TabIndex = 19;
-            // 
             // salvar
             // 
             salvar.BackColor = Color.ForestGreen;
@@ -100,20 +92,27 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(12, 41);
+            comboBox2.Location = new Point(11, 41);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(174, 23);
+            comboBox2.Size = new Size(163, 23);
             comboBox2.TabIndex = 21;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // checkedListBox1
+            // 
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Location = new Point(208, 41);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(153, 22);
+            checkedListBox1.TabIndex = 22;
             // 
             // FormLivrodoLeitor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(394, 158);
+            Controls.Add(checkedListBox1);
             Controls.Add(comboBox2);
             Controls.Add(salvar);
-            Controls.Add(comboBox1);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(buttonExcluir);
@@ -130,8 +129,8 @@
         private Button buttonEditar;
         private Label label1;
         private Label label3;
-        private ComboBox comboBox1;
         private Button salvar;
         private ComboBox comboBox2;
+        private CheckedListBox checkedListBox1;
     }
 }

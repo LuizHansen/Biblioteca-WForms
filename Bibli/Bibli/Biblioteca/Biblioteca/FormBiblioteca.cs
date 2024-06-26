@@ -121,23 +121,41 @@ namespace Biblioteca
             dataGridViewLivroAlugado.Columns.Clear();
 
             dataGridViewLivroAlugado.Columns.Add("Leitor", "Leitor");
-            dataGridViewLivroAlugado.Columns.Add("Exemplar", "Exemplar");
+            dataGridViewLivroAlugado.Columns.Add("Exemplares", "Exemplares");
 
-            var displayedPairs = new HashSet<Tuple<Leitor, Exemplar>>();
-
-            // Percorrer todos os leitores e seus exemplares
+            // Percorre todos os leitores para preencher o DataGridView
             foreach (var leitor in leitores)
             {
-                foreach (var exemplar in leitor.ExemplaresLeitor)
+                // Cria uma lista de títulos de exemplares alugados pelo leitor
+                List<string> exemplaresTitulos = leitor.ExemplaresLeitor.Select(ex => ex.Titulo).ToList();
+
+                // Adiciona uma única linha para o leitor com seus exemplares alugados concatenados
+                dataGridViewLivroAlugado.Rows.Add(leitor.Nome, string.Join(", ", exemplaresTitulos));
+            }
+
+            // Adiciona o evento CellClick para abrir o formulário FormLivrodoLeitor com os dados da linha clicada
+            dataGridViewLivroAlugado.CellClick += (sender, e) =>
+            {
+                if (e.RowIndex >= 0) // Verifica se o índice da linha é válido
                 {
-                    var pair = Tuple.Create(leitor, exemplar);
-                    if (!displayedPairs.Contains(pair))
+                    // Obtém os valores das células da linha selecionada
+                    DataGridViewRow row = dataGridViewLivroAlugado.Rows[e.RowIndex];
+                    string leitorNome = row.Cells["Leitor"].Value.ToString();
+
+                    // Obtém o leitor selecionado
+                    Leitor leitor = leitores.FirstOrDefault(l => l.Nome == leitorNome);
+                    if (leitor != null)
                     {
-                        displayedPairs.Add(pair);
-                        dataGridViewLivroAlugado.Rows.Add(leitor.Nome, exemplar.Titulo);
+                        // Obtém os títulos dos exemplares alugados pelo leitor
+                        List<string> exemplaresTitulos = leitor.ExemplaresLeitor.Select(ex => ex.Titulo).ToList();
+
+                        // Abre o FormLivrodoLeitor com os dados do leitor e seus exemplares
+                        FormLivrodoLeitor formLivrodoLeitor = new FormLivrodoLeitor();
+                        formLivrodoLeitor.SetLeitorAndExemplares(leitorNome, exemplaresTitulos);
+                        formLivrodoLeitor.ShowDialog();
                     }
                 }
-            }
+            };
         }
 
 

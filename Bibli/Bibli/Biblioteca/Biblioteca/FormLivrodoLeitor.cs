@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Biblioteca
@@ -43,13 +38,33 @@ namespace Biblioteca
         public void definirExemplares()
         {
             List<String> exemplaresNomes = new List<String>();
-            foreach (var exemplar in this.exemplares)
+
+            // Exibe todos os exemplares disponíveis
+            foreach (var exemplar in exemplares)
             {
                 exemplaresNomes.Add(exemplar.Titulo);
             }
 
-            comboBox1.DataSource = exemplaresNomes;
+            // Configura o CheckedListBox para exibir os itens disponíveis
+            checkedListBox1.Items.Clear();
+            checkedListBox1.Items.AddRange(exemplaresNomes.ToArray());
+            checkedListBox1.ColumnWidth = 100; // Define a largura da coluna para ajustar os itens
+            checkedListBox1.CheckOnClick = true;
         }
+
+
+
+        public void SetLeitorAndExemplares(string leitorNome, List<string> exemplaresTitulos)
+        {
+            comboBox2.SelectedItem = leitorNome;
+
+            // Limpa e preenche o CheckedListBox com os exemplares do leitor
+            checkedListBox1.Items.Clear();
+            checkedListBox1.Items.AddRange(exemplaresTitulos.ToArray());
+            checkedListBox1.ColumnWidth = 100; // Define a largura da coluna para ajustar os itens
+            checkedListBox1.CheckOnClick = true;
+        }
+
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -59,19 +74,25 @@ namespace Biblioteca
         private void salvar_Click(object sender, EventArgs e)
         {
             string leitorNome = comboBox2.SelectedItem.ToString();
-            string exemplarTitulo = comboBox1.SelectedItem.ToString();
-
             Leitor leitorSelecionado = leitores.FirstOrDefault(l => l.Nome == leitorNome);
-            Exemplar exemplarSelecionado = exemplares.FirstOrDefault(ex => ex.Titulo == exemplarTitulo);
 
-            if (leitorSelecionado != null && exemplarSelecionado != null)
+            if (leitorSelecionado != null)
             {
-                leitorSelecionado.AdicionaExemplarLeitor(exemplarSelecionado, leitorSelecionado);
-                MessageBox.Show($"Exemplar '{exemplarSelecionado.Titulo}' adicionado ao leitor '{leitorSelecionado.Nome}' com sucesso!");
+                foreach (var checkedItem in checkedListBox1.CheckedItems)
+                {
+                    string exemplarTitulo = checkedItem.ToString();
+                    Exemplar exemplarSelecionado = exemplares.FirstOrDefault(ex => ex.Titulo == exemplarTitulo);
+
+                    if (exemplarSelecionado != null)
+                    {
+                        leitorSelecionado.AdicionaExemplarLeitor(exemplarSelecionado, leitorSelecionado);
+                    }
+                }
+                MessageBox.Show("Exemplares adicionados ao leitor com sucesso!");
             }
             else
             {
-                MessageBox.Show("Erro ao adicionar o exemplar ao leitor. Verifique as seleções e tente novamente.");
+                MessageBox.Show("Erro ao adicionar os exemplares ao leitor. Verifique as seleções e tente novamente.");
             }
         }
     }

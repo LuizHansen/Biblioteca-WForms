@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             buttonExcluir = new Button();
-            buttonEditar = new Button();
             label1 = new Label();
             label3 = new Label();
             salvar = new Button();
@@ -41,23 +40,13 @@
             // 
             buttonExcluir.BackColor = Color.Red;
             buttonExcluir.ForeColor = Color.White;
-            buttonExcluir.Location = new Point(264, 106);
+            buttonExcluir.Location = new Point(226, 106);
             buttonExcluir.Name = "buttonExcluir";
             buttonExcluir.Size = new Size(117, 35);
             buttonExcluir.TabIndex = 11;
             buttonExcluir.Text = "Excluir";
             buttonExcluir.UseVisualStyleBackColor = false;
-            // 
-            // buttonEditar
-            // 
-            buttonEditar.BackColor = Color.DarkCyan;
-            buttonEditar.ForeColor = Color.White;
-            buttonEditar.Location = new Point(11, 106);
-            buttonEditar.Name = "buttonEditar";
-            buttonEditar.Size = new Size(117, 35);
-            buttonEditar.TabIndex = 10;
-            buttonEditar.Text = "Editar";
-            buttonEditar.UseVisualStyleBackColor = false;
+            buttonExcluir.Click += buttonExcluir_Click;
             // 
             // label1
             // 
@@ -81,7 +70,7 @@
             // 
             salvar.BackColor = Color.ForestGreen;
             salvar.ForeColor = Color.White;
-            salvar.Location = new Point(134, 106);
+            salvar.Location = new Point(28, 106);
             salvar.Name = "salvar";
             salvar.Size = new Size(124, 35);
             salvar.TabIndex = 20;
@@ -116,7 +105,6 @@
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(buttonExcluir);
-            Controls.Add(buttonEditar);
             Name = "FormLivrodoLeitor";
             Text = "FormLivrodoLeitor";
             ResumeLayout(false);
@@ -126,7 +114,6 @@
         #endregion
 
         private Button buttonExcluir;
-        private Button buttonEditar;
         private Label label1;
         private Label label3;
         private Button salvar;

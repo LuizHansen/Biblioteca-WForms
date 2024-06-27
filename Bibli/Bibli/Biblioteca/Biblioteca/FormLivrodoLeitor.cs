@@ -29,11 +29,13 @@ namespace Biblioteca
             List<String> leitoresNomes = new List<String>();
             foreach (var leitor in this.leitores)
             {
-                leitoresNomes.Add(leitor.Nome);
+                leitoresNomes.Add(leitor.Nome); // Adiciona o nome de cada leitor à lista
             }
 
+            // Configura o comboBox2 para exibir os nomes dos leitores
             comboBox2.DataSource = leitoresNomes;
         }
+
 
         public void definirExemplares()
         {
@@ -95,5 +97,43 @@ namespace Biblioteca
                 MessageBox.Show("Erro ao adicionar os exemplares ao leitor. Verifique as seleções e tente novamente.");
             }
         }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            string leitorNome = comboBox2.SelectedItem?.ToString();
+            Leitor leitorSelecionado = leitores.FirstOrDefault(l => l.Nome == leitorNome);
+
+            if (leitorSelecionado != null)
+            {
+                // Cria uma lista auxiliar para armazenar os exemplares a serem removidos
+                var exemplaresARemover = new List<Exemplar>();
+
+                foreach (var checkedItem in checkedListBox1.CheckedItems)
+                {
+                    string exemplarTitulo = checkedItem.ToString();
+                    Exemplar exemplarSelecionado = exemplares.FirstOrDefault(ex => ex.Titulo == exemplarTitulo);
+
+                    if (exemplarSelecionado != null)
+                    {
+                        exemplaresARemover.Add(exemplarSelecionado);
+                    }
+                }
+
+                // Remove os exemplares selecionados do leitor
+                foreach (var exemplar in exemplaresARemover)
+                {
+                    leitorSelecionado.RemoveExemplarLeitor(exemplar, leitorSelecionado);
+                }
+
+                // Atualiza o CheckedListBox após a exclusão
+                definirExemplares();
+                MessageBox.Show("Exemplares removidos do leitor com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao remover os exemplares do leitor. Verifique as seleções e tente novamente.");
+            }
+        }
     }
 }
+

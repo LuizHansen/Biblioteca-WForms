@@ -2,7 +2,7 @@ namespace Biblioteca
 {
     public partial class FormBiblioteca : Form
     {
-        //luiz hansen
+        //luiz hansen, Yuri Martinelli, Tarcisio Correa
         public List<Funcionario> funcionarios;
         public List<Leitor> leitores;
         public List<Exemplar> exemplares;
@@ -134,13 +134,12 @@ namespace Biblioteca
             }
 
             // Adiciona o evento CellClick para abrir o formulário FormLivrodoLeitor com os dados da linha clicada
-            dataGridViewLivroAlugado.CellClick += (sender, e) =>
+            dataGridViewLivroAlugado.CellContentClick += (sender, e) =>
             {
-                if (e.RowIndex >= 0) // Verifica se o índice da linha é válido
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0) // Verifica se o índice da linha e coluna são válidos
                 {
-                    // Obtém os valores das células da linha selecionada
-                    DataGridViewRow row = dataGridViewLivroAlugado.Rows[e.RowIndex];
-                    string leitorNome = row.Cells["Leitor"].Value.ToString();
+                    DataGridViewCell cell = dataGridViewLivroAlugado.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                    string leitorNome = dataGridViewLivroAlugado.Rows[e.RowIndex].Cells["Leitor"].Value.ToString();
 
                     // Obtém o leitor selecionado
                     Leitor leitor = leitores.FirstOrDefault(l => l.Nome == leitorNome);
@@ -156,6 +155,7 @@ namespace Biblioteca
                     }
                 }
             };
+
         }
 
 

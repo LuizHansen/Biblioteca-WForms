@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\biblioteca\\formlivrodoleitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\formlivrodoleitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\biblioteca\\formbiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\formbiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|c:\\users\\yurim\\source\\repos\\biblioteca-wforms\\bibli\\bibli\\biblioteca\\biblioteca\\formlivrodoleitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\formlivrodoleitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\biblioteca\\alugarlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\alugarlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\biblioteca\\formlivrodoleitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\formlivrodoleitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|c:\\users\\yurim\\source\\repos\\biblioteca-wforms\\bibli\\bibli\\biblioteca\\biblioteca\\leitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\leitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\biblioteca\\formpessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +27,12 @@
       "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\formbiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\biblioteca\\formbiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\formbiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\biblioteca\\exemplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\exemplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\biblioteca\\leitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\leitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\biblioteca\\alugarlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AD42CB2-9EA6-4279-8B28-917D17A3C441}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\alugarlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,6 +66,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Leitor.cs",
+              "DocumentMoniker": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Leitor.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Leitor.cs",
+              "ToolTip": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Leitor.cs",
+              "RelativeToolTip": "Biblioteca\\Leitor.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAA8wGoAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T00:50:21.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "FormLivrodoLeitor.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\FormLivrodoLeitor.cs",
@@ -78,13 +91,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FormLivrodoLeitor.cs",
               "DocumentMoniker": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\FormLivrodoLeitor.cs",
               "RelativeDocumentMoniker": "Biblioteca\\FormLivrodoLeitor.cs",
               "ToolTip": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\FormLivrodoLeitor.cs",
               "RelativeToolTip": "Biblioteca\\FormLivrodoLeitor.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCEAAAAAAAAA",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAuwIoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T15:52:46.722Z",
               "EditorCaption": ""
@@ -97,64 +110,53 @@
               "RelativeDocumentMoniker": "Biblioteca\\Exemplar.cs",
               "ToolTip": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Exemplar.cs",
               "RelativeToolTip": "Biblioteca\\Exemplar.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA1wBUAAAAJAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T15:50:22.437Z"
+              "WhenOpened": "2024-06-26T15:50:22.437Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "AlugarLivro.cs",
               "DocumentMoniker": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\AlugarLivro.cs",
               "RelativeDocumentMoniker": "Biblioteca\\AlugarLivro.cs",
               "ToolTip": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\AlugarLivro.cs",
               "RelativeToolTip": "Biblioteca\\AlugarLivro.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAgAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAIwAYAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T15:47:01.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "FormBiblioteca.cs",
               "DocumentMoniker": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\FormBiblioteca.cs",
               "RelativeDocumentMoniker": "Biblioteca\\FormBiblioteca.cs",
               "ToolTip": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\FormBiblioteca.cs",
               "RelativeToolTip": "Biblioteca\\FormBiblioteca.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAiwJ0AAAAOAAAA",
+              "ViewState": "AQIAAGcAAAAAAAAAAAA3wHoAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T03:29:34.119Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FormPessoa.cs",
               "DocumentMoniker": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\FormPessoa.cs",
               "RelativeDocumentMoniker": "Biblioteca\\FormPessoa.cs",
               "ToolTip": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\FormPessoa.cs",
               "RelativeToolTip": "Biblioteca\\FormPessoa.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAnwDQAAAAhAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAMwCEAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T15:43:06.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Leitor.cs",
-              "DocumentMoniker": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Leitor.cs",
-              "RelativeDocumentMoniker": "Biblioteca\\Leitor.cs",
-              "ToolTip": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\Leitor.cs",
-              "RelativeToolTip": "Biblioteca\\Leitor.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAcwHYAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T15:38:04.732Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FormBiblioteca.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\yurim\\source\\repos\\Biblioteca-WForms\\Bibli\\Bibli\\Biblioteca\\Biblioteca\\FormBiblioteca.cs",
               "RelativeDocumentMoniker": "Biblioteca\\FormBiblioteca.cs",
